@@ -304,9 +304,7 @@ var tabs = function tabs() {
     });
   }
 
-  selectTabContent(); // удалить код ниже в продакшене
-
-  document.querySelector('.tab-3').classList.add('is-active');
+  selectTabContent();
 };
 
 tabs();
