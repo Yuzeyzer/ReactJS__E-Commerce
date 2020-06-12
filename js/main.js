@@ -154,6 +154,27 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/js/components/animation.js":
+/*!****************************************!*\
+  !*** ./src/js/components/animation.js ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+$(".to-menu").click(function () {
+  $('html, body').animate({
+    scrollTop: parseInt($("#menu").offset().top - 210)
+  }, 1000);
+});
+$(".to-offers").click(function () {
+  $('html, body').animate({
+    scrollTop: parseInt($("#offers").offset().top - 150)
+  }, 1000);
+});
+$(document).ready(function () {});
+
+/***/ }),
+
 /***/ "./src/js/components/slider.js":
 /*!*************************************!*\
   !*** ./src/js/components/slider.js ***!
@@ -182,17 +203,19 @@ $(document).ready(function () {
 
   heroSlider();
 
-  var menuSlider = function menuSlider() {
+  var menuSlider = function menuSlider(slideNumber) {
+    var _sliderMenu$slick;
+
     var sliderMenu = $('.menu__slider');
-    sliderMenu.slick(_babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()({
+    sliderMenu.slick((_sliderMenu$slick = {
       dots: false,
       infinite: true,
       speed: 300,
-      slidesToShow: 11
-    }, "infinite", true));
+      slidesToShow: slideNumber
+    }, _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_sliderMenu$slick, "infinite", false), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_sliderMenu$slick, "autoplay", true), _babel_runtime_helpers_defineProperty__WEBPACK_IMPORTED_MODULE_0___default()(_sliderMenu$slick, "autoplaySpeed", 3000), _sliderMenu$slick));
   };
 
-  menuSlider();
+  menuSlider(11);
 
   var offersSlider = function offersSlider() {
     var slider = $('.offers__slider');
@@ -202,9 +225,13 @@ $(document).ready(function () {
       infinite: true,
       slidesToShow: 3,
       speed: 300,
+      autoplay: true,
+      autoplaySpeed: 3000,
       responsive: [{
         breakpoint: 1024,
-        settings: "unslick"
+        settings: {
+          slidesToShow: 2
+        }
       }]
     });
   };
@@ -213,30 +240,76 @@ $(document).ready(function () {
 
   var destroySlider = function destroySlider() {
     var sliderMenu = $('.menu__slider');
-    sliderMenu.slick('unslick');
     sliderMenu.addClass('menu__row');
     sliderMenu.removeClass('menu__slider');
+    sliderMenu.slick('unslick');
   };
 
   if (window.innerWidth <= 1024) {
     destroySlider();
-  } else {
-    var _sliderMenu = $('.menu__row');
-
-    _sliderMenu.addClass('menu__slider');
+  } else if (window.innerWidth >= 1024) {
+    var sliderMenu = $('.menu__row');
+    sliderMenu.addClass('menu__slider');
+    sliderMenu.removeClass('menu__row');
   }
 
-  var sliderMenu = $('.menu__slider') || $('.menu__row');
   $(window).on('resize', function () {
     if (window.innerWidth <= 1024) {
+      var _sliderMenu = $('.menu__slider');
+
       destroySlider();
-    } else if ($('.menu__row')) {
-      sliderMenu.addClass('menu__slider');
-      sliderMenu.removeClass('menu__row');
-      menuSlider();
+
+      _sliderMenu.removeClass('menu__slider');
+    } else {
+      var _sliderMenu2 = $('.menu__row');
+
+      _sliderMenu2.addClass('menu__slider');
+
+      _sliderMenu2.removeClass('menu__row');
+
+      menuSlider(11);
     }
   });
 });
+
+/***/ }),
+
+/***/ "./src/js/components/tabs.js":
+/*!***********************************!*\
+  !*** ./src/js/components/tabs.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var tabs = function tabs() {
+  var tabNav = document.querySelectorAll('.tabs-nav__item'),
+      tabContent = document.querySelectorAll('.tab'),
+      tabname;
+  tabNav.forEach(function (item) {
+    item.addEventListener('click', selectedTab);
+  });
+
+  function selectedTab() {
+    tabNav.forEach(function (item) {
+      item.classList.remove('is-active');
+    });
+    this.classList.add('is-active');
+    tabname = this.getAttribute('data-tab-name');
+    selectTabContent(tabname);
+  }
+
+  function selectTabContent(tabName) {
+    tabContent.forEach(function (item) {
+      item.classList.contains(tabName) ? item.classList.add('is-active') : item.classList.remove('is-active');
+    });
+  }
+
+  selectTabContent(); // удалить код ниже в продакшене
+
+  document.querySelector('.tab-3').classList.add('is-active');
+};
+
+tabs();
 
 /***/ }),
 
@@ -251,6 +324,12 @@ $(document).ready(function () {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vendor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./vendor */ "./src/js/vendor.js");
 /* harmony import */ var _components_slider__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/slider */ "./src/js/components/slider.js");
+/* harmony import */ var _components_animation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/animation */ "./src/js/components/animation.js");
+/* harmony import */ var _components_animation__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_components_animation__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/tabs */ "./src/js/components/tabs.js");
+/* harmony import */ var _components_tabs__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_components_tabs__WEBPACK_IMPORTED_MODULE_3__);
+
+
 
 
 
