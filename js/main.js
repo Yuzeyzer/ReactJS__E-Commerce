@@ -171,6 +171,15 @@ $(".to-offers").click(function () {
     scrollTop: parseInt($("#offers").offset().top - 150)
   }, 1000);
 });
+$('.delivery__pay div').on('click', function () {
+  if (this) {
+    for (var i = 0; i < $('.delivery__pay div').length; i++) {
+      $('.delivery__pay div')[i].classList.remove('is-active');
+    }
+  }
+
+  $(this).addClass('is-active');
+});
 $(document).ready(function () {});
 
 /***/ }),

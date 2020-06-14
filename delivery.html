@@ -11,11 +11,11 @@
     <meta property="og:locale" content="ru_RU">
     <meta property="og:title" content="Lavash Food">
     <meta property="og:description" content="НОВЫЙ ФОРМАТ ФАСТФУДА В КАЗАХСТАНЕ">
-    <meta property="og:image" content="./images/hero-1.png">
+    <meta property="og:image" content="./hero-4.png">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Lavash Food">
     <meta name="twitter:description" content="НОВЫЙ ФОРМАТ ФАСТФУДА В КАЗАХСТАНЕ">
-    <meta name="twitter:image" content="./images/hero-1.png">
+    <meta name="twitter:image" content="./hero-4.png">
     <meta name="apple-mobile-web-app-title" content="Lavash Food">
     <meta name="application-name" content="Lavash Food">
     <meta name="theme-color" content="#ffffff">
@@ -23,7 +23,7 @@
     <link rel="icon" href="./favicon-16x16.png" sizes="16x16">
     <link rel="icon" href="./favicon-32x32.png" sizes="32x32">
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/main.css?v=1592102016543">
+    <link rel="stylesheet" href="./css/main.css?v=1592102016936">
 </head>
 
 <body>
@@ -66,142 +66,64 @@
         </div>
     </header>
     <main class="main">
-        <section class="bin">
+        <section class="delivery">
             <div class="container">
                 <div class="header-block">
-                    <h3 class="title">Корзина</h3>
-                    <div class="icon"><img src="./images/bin-icon.png" alt=""></div>
+                    <h3 class="title">Доставка</h3>
+                    <div class="icon"><img src="./images/delivery-icon.png" alt="Процесс доставки"></div>
                 </div>
-                <div class="bin__content">
-                    <div class="order for-desktop">
-                        <div class="order__row for-desktop">
-                            <div class="order__img"><img src="./images/order-1.png" alt="" /></div>
-                            <div class="order__info">
-                                <h3 class="order__title"> Лаваш с курицей</h3>
-                                <p class="order__description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                            </div>
-                            <div class="order__price">1020 Т</div>
-                            <div class="order__count">
-                                <div class="order__dicrement"> </div>
-                                <div class="order__number">1</div>
-                                <div class="order__increment"> </div>
-                            </div>
-                            <div class="order__price-total"><span>Всего:</span>
-                                <p>1020 т</p>
-                            </div>
-                        </div>
-                        <div class="order__remove"></div>
+                <form class="delivery__form" action="">
+                    <div class="col-6">
+                        <p class="delivery__title-input">Имя*</p>
+                        <label for="">
+								<input type="text" name="name" placeholder="Введите Ваше Имя" required>
+							</label>
+                        <p class="delivery__title-input">Телефон*</p>
+                        <label for="">
+								<input type="text" name="phone" placeholder="Номер Вашего Телефона" required>
+							</label>
+                        <p class="delivery__title-input">Комментарий к Заказу*</p>
+                        <label for="">
+								<textarea name="comment" cols="30" rows="10" placeholder="Вы Можете Оставить Комментарий к Заказу"></textarea>
+							</label>
                     </div>
-                    <div class="order for-mobile">
-                        <div class="order__row">
-                            <div class="order__col-6">
-                                <div class="order__img"><img src="./images/order-1.png" alt="" /></div>
-                                <div class="order__count">
-                                    <div class="order__dicrement"> </div>
-                                    <div class="order__number">1</div>
-                                    <div class="order__increment"> </div>
-                                    <div class="order__total">
-                                        Всего:</div>
+                    <div class="col-6">
+                        <p class="delivery__title-input">Адрес*</p>
+                        <label for=""> 
+								<input type="text" name="address" placeholder="Улица, дом, подъезд, квартира" required>
+							</label>
+                        <p class="delivery__title-input">Способ оплаты*</p>
+                        <div class="row">
+                            <div class="delivery__pay">
+                                <div class="delivery__pay-cash">
+                                    <label for="">
+											<input type="radio" name="cash"><img src="./images/cash.png" alt="">
+										</label>
                                 </div>
+                                <p>Наличными</p>
                             </div>
-                            <div class="order__info">
-                                <h3 class="order__title"> Лаваш с курицей</h3>
-                                <p class="order__description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                            </div>
-                            <p class="order__price-total">1020 т</p>
-                        </div>
-                        <div class="order__remove"></div>
-                    </div>
-                    <div class="order for-desktop">
-                        <div class="order__row for-desktop">
-                            <div class="order__img"><img src="./images/order-1.png" alt="" /></div>
-                            <div class="order__info">
-                                <h3 class="order__title"> Лаваш с курицей</h3>
-                                <p class="order__description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                            </div>
-                            <div class="order__price">1020 Т</div>
-                            <div class="order__count">
-                                <div class="order__dicrement"> </div>
-                                <div class="order__number">1</div>
-                                <div class="order__increment"> </div>
-                            </div>
-                            <div class="order__price-total"><span>Всего:</span>
-                                <p>1020 т</p>
-                            </div>
-                        </div>
-                        <div class="order__remove"></div>
-                    </div>
-                    <div class="order for-mobile">
-                        <div class="order__row">
-                            <div class="order__col-6">
-                                <div class="order__img"><img src="./images/order-1.png" alt="" /></div>
-                                <div class="order__count">
-                                    <div class="order__dicrement"> </div>
-                                    <div class="order__number">1</div>
-                                    <div class="order__increment"> </div>
-                                    <div class="order__total">
-                                        Всего:</div>
+                            <div class="delivery__pay">
+                                <div class="delivery__pay-card">
+                                    <label for="">
+											<input type="radio" name="card"><img src="./images/card.png" alt="">
+										</label>
                                 </div>
-                            </div>
-                            <div class="order__info">
-                                <h3 class="order__title"> Лаваш с курицей</h3>
-                                <p class="order__description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                            </div>
-                            <p class="order__price-total">1020 т</p>
-                        </div>
-                        <div class="order__remove"></div>
-                    </div>
-                    <div class="order for-desktop">
-                        <div class="order__row for-desktop">
-                            <div class="order__img"><img src="./images/order-1.png" alt="" /></div>
-                            <div class="order__info">
-                                <h3 class="order__title"> Лаваш с курицей</h3>
-                                <p class="order__description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                            </div>
-                            <div class="order__price">1020 Т</div>
-                            <div class="order__count">
-                                <div class="order__dicrement"> </div>
-                                <div class="order__number">1</div>
-                                <div class="order__increment"> </div>
-                            </div>
-                            <div class="order__price-total"><span>Всего:</span>
-                                <p>1020 т</p>
+                                <p>Картой</p>
                             </div>
                         </div>
-                        <div class="order__remove"></div>
-                    </div>
-                    <div class="order for-mobile">
-                        <div class="order__row">
-                            <div class="order__col-6">
-                                <div class="order__img"><img src="./images/order-1.png" alt="" /></div>
-                                <div class="order__count">
-                                    <div class="order__dicrement"> </div>
-                                    <div class="order__number">1</div>
-                                    <div class="order__increment"> </div>
-                                    <div class="order__total">
-                                        Всего:</div>
-                                </div>
+                        <div class="bin__footer for-desktop"><a class="bin__back" href="bin.html">Вернуться</a>
+                            <div class="bin__order">
+                                <button class="bin__order-make">
+										 Сделать заказ</button>
                             </div>
-                            <div class="order__info">
-                                <h3 class="order__title"> Лаваш с курицей</h3>
-                                <p class="order__description"> Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-                            </div>
-                            <p class="order__price-total">1020 т</p>
                         </div>
-                        <div class="order__remove"></div>
+                        <div class="bin__footer for-mobile"><a class="bin__back" href="bin.html">Вернуться</a>
+                            <div class="bin__order">
+                                <button class="bin__order-make">Сделать заказ</button>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="bin__footer for-desktop"><a class="bin__back" href="index.html">Вернуться к меню</a>
-                    <div class="bin__order">
-                        <h5 class="bin__finall-price">
-                            Итого: <span>3 060 т</span></h5><a class="bin__order-make" href="delivery.html">
-								 Сделать заказ</a>
-                    </div>
-                </div>
-                <div class="bin__footer for-mobile"><a class="bin__back" href="index.html">Вернуться</a>
-                    <div class="bin__order"><a class="bin__order-make" href="delivery.html">
-								 Сделать заказ</a></div>
-                </div>
+                </form>
             </div>
         </section>
     </main>
@@ -248,8 +170,8 @@
             </div>
         </div>
     </footer>
-    <script src="./js/vendor.js?v=1592102016544"></script>
-    <script src="./js/main.js?v=1592102016544"></script>
+    <script src="./js/vendor.js?v=1592102016936"></script>
+    <script src="./js/main.js?v=1592102016936"></script>
 </body>
 
 </html>
